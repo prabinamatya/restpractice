@@ -1,3 +1,4 @@
+package com.prabin.restpractice;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -9,6 +10,12 @@ import org.json.JSONObject;
 
 @Path("/ftocservice")
 public class FtoCService {
+
+	@GET
+	@Produces("text/html")
+	public String getHtml() {
+		return "<html lang=\"en\"><body><h1> Hello !!! </h1></body></html>";
+	}
 
 	@GET
 	@Produces("application/json")
